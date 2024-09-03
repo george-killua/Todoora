@@ -51,4 +51,5 @@ To set up and run the Todoora project locally:
 ---
 
 ## License
-his project is licensed under the MIT License - see the LICENSE file for more details.
+
+his project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.
