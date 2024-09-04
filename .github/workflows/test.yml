@@ -6,6 +6,10 @@ on:
       - opened
     branches:
       - 'master'
+  push:
+    branches:
+      - 'test-workflow'  # This triggers the workflow when pushing to this branch (optional)
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
 
 jobs:
   test:
@@ -21,12 +25,14 @@ jobs:
           distribution: 'temurin'
           java-version: 22
           cache: 'gradle'
+
       - name: Load Google Service file
         env:
           DATA: ${{ secrets.GOOGLE_SERVICES_JSON }}
-        run: echo $DATA | base64 -di > app/google-services.json
-      - name: Grand execute permissions to gradlew
+        run: echo $DATA | base64 -d > app/google-services.json  # Ensure google-services.json is set correctly in secrets
+
+      - name: Grant execute permissions to gradlew
         run: chmod +x gradlew
 
       - name: Run unit tests
-        run: ./gradlew testDebug
+        run: ./gradlew test  # Adjust to your project's test task (e.g., testDebug, testRelease, etc.)
