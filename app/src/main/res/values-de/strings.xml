@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Todoora</string>
+    <string name="add_task">Aufgabe hinzufügen</string>
+    <string name="save_to_cloud">in der Cloud speichern</string>
+    <string name="add_task_title">Aufgabe hinzufügen</string>
+    <string name="setting_title">Einstellungen</string>
+    <string name="edit_task_title">Aufgabe bearbeiten</string>
+    <string name="txt_field_task_description">Geben Sie die Aufgabenbeschreibung ein</string>
+    <string name="txt_field_task_title">Geben Sie den Aufgabentitel ein</string>
+    <string name="btn_update_task">Aufgabe aktualisieren</string>
+    <string name="btn_back">Zurück</string>
+    <string name="txt_field_enter_task_title">Geben Sie den Aufgabentitel ein</string>
+    <string name="txt_field_enter_task_description">Geben Sie die Aufgabenbeschreibung ein</string>
+    <string name="btn_add_task">Aufgabe hinzufügen</string>
+    <string name="header_use_system_mode">Systemmodus verwenden</string>
+    <string name="header_use_dark_mode">Dunklen Modus verwenden</string>
+    <string name="btn_upload_tasks_to_firebase">Aufgaben auf Firebase hochladen</string>
+    <string name="btn_sync_tasks_from_firebase">Aufgaben von Firebase synchronisieren</string>
+    <string name="btn_login_with_google">Mit Google anmelden</string>
+    <string name="header_sync_completed_successfully">Synchronisierung erfolgreich abgeschlossen!</string>
+    <string name="txt_error">Fehler: %1$s</string>
+    <string name="txt_list_error">Ein Fehler ist aufgetreten</string>
+    <string name="btn_action_settings">Einstellungen</string>
+    <string name="btn_select_due_date">Fälligkeitsdatum auswählen</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="accept">Akzept</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues name="AGP (8.6.0)" by="lint 8.6.0" client="gradle" dependencies="false" format="6"
+    type="baseline" variant="all" version="8.6.0">
+
+    <issue id="UnusedResources"
+        message="The resource `R.mipmap.ic_launcher_foreground` appears to be unused">
+        <location file="src/main/res/mipmap-hdpi/ic_launcher_foreground.png" />
+    </issue>
+
+    <issue id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location file="src/main/res/mipmap-hdpi/ic_launcher.png" />
+    </issue>
+
+    <issue id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location file="src/main/res/mipmap-mdpi/ic_launcher.png" />
+    </issue>
+
+    <issue id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location file="src/main/res/mipmap-xhdpi/ic_launcher.png" />
+    </issue>
+
+    <issue id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location file="src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+    </issue>
+
+    <issue id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location file="src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+    </issue>
+
+</issues>

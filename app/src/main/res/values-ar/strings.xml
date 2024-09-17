@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Todoora</string>
+    <string name="add_task">إضافة مهمة</string>
+    <string name="save_to_cloud">حفظ إلى السحابة</string>
+    <string name="add_task_title">إضافة مهمة</string>
+    <string name="setting_title">الإعدادات</string>
+    <string name="edit_task_title">تعديل المهمة</string>
+    <string name="txt_field_task_description">أدخل وصف المهمة</string>
+    <string name="txt_field_task_title">أدخل عنوان المهمة</string>
+    <string name="btn_update_task">تحديث المهمة</string>
+    <string name="btn_back">رجوع</string>
+    <string name="txt_field_enter_task_title">أدخل عنوان المهمة</string>
+    <string name="txt_field_enter_task_description">أدخل وصف المهمة</string>
+    <string name="btn_add_task">إضافة مهمة</string>
+    <string name="header_use_system_mode">استخدام وضع النظام</string>
+    <string name="header_use_dark_mode">استخدام الوضع المظلم</string>
+    <string name="btn_upload_tasks_to_firebase">رفع المهام إلى Firebase</string>
+    <string name="btn_sync_tasks_from_firebase">مزامنة المهام من Firebase</string>
+    <string name="btn_login_with_google">تسجيل الدخول باستخدام Google</string>
+    <string name="header_sync_completed_successfully">تمت المزامنة بنجاح!</string>
+    <string name="txt_error">خطأ: %1$s</string>
+    <string name="txt_list_error">حدث خطأ</string>
+    <string name="btn_action_settings">الإعدادات</string>
+    <string name="btn_select_due_date">اختر تاريخ الاستحقاق</string>
+    <string name="cancel">إلغاء</string>
+    <string name="accept">قبول</string>
+</resources>

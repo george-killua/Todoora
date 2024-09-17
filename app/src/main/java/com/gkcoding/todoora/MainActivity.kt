@@ -4,46 +4,37 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.gkcoding.todoora.ui.theme.TodooraTheme
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.runtime.collectAsState
+import androidx.lifecycle.lifecycleScope
+import com.gkcoding.todoora.data.local.DataStoreManager
+import com.gkcoding.todoora.theme.TodooraTheme
+import com.gkcoding.todoora.utils.AppNavigation
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    @Inject
+    lateinit var dataStoreManager: DataStoreManager // Inject DataStoreManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent {
-            TodooraTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+        lifecycleScope.launch {
+            setContent {
+                val darkTheme = dataStoreManager.darkModeFlow.collectAsState(initial = false).value
+                val useSystemMode =
+                    dataStoreManager.systemModeFlow.collectAsState(initial = false).value
+
+                TodooraTheme(
+                    darkTheme = if (useSystemMode) isSystemInDarkTheme() else darkTheme,
+                    dynamicColor = true
+                ) {
+                    AppNavigation()
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name! and goodbye",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TodooraTheme {
-        Greeting("Android")
     }
 }
